@@ -9,3 +9,14 @@ console.war("Mensaje ide tipo alerta")
 // Monstrar unmensaje de estilo o tipo error
 
 console.error("Mensaje error")
+
+// mensaje tipo tabla
+console.table("soy una tabla y edwin el chavo y orlando es virgen")
+
+lenguajes=[
+    {nombre:"javascript",extencion:".js"},
+    {nombre:"python", extencion:".py"},
+    {nombre:"php",extencion:".php"}
+  ]
+  console.log(lenguajes)
+  console.table(lenguajes)
