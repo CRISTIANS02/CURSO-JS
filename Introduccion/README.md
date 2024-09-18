@@ -97,12 +97,14 @@ Las variables tienen reglas muy especificas que debemos segir ala hora de design
 con espacios =45
     
 ```
+
 - No usar un numero delante
 >[!WARNING]
 ```js
 # iNCORRECTO
 1numero=45
 ```
+
 - Evitar simbolos y `snake_case`
 >[!WARNING]
    ```js
