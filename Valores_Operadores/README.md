@@ -48,6 +48,7 @@ NaN  → not a number
 // Not  a Number → no es un numero
 // Cuando el resultado de una operacion es matematicamente imposible
 ```
-
+### Aritmetica (Operadores Aritmeticos)
+3
 - tipos (tipos de datos)
 - operadores
