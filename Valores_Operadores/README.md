@@ -1,6 +1,10 @@
 # VALORES, TIPOS Y OPERADORES
 ## Indice
-- [tipos de datos o valorez](#valores)
+- [Valores, Tipos y operadores](#valores-tipos-y-operadores)
+    -[Valores](#valores)
+     -[Valores](#valores)
+
+
 
 ## Valores (datos)
 Imagina un mar de bits.
@@ -49,6 +53,17 @@ NaN  → not a number
 // Cuando el resultado de una operacion es matematicamente imposible
 ```
 ### Aritmetica (Operadores Aritmeticos)
-3
-- tipos (tipos de datos)
-- operadores
+#### Aritmetica
+La principal operacion que se puede hacer con numeros es la aitmerica.
+Para esto tenemos los `Operadores Aritmeticos` basicos como:
+
+- Suma (+)
+- Resta (-)
+- Multiplicacion (*)
+- Divicion (/)
+- Modulo (%)
+  
+**Podemos agrupar operaciones con parentesis () las operaciones pues**
+consulta de archivos de operadores [aqui](./Operadores.js). ve los ejercicios [aqui](./ejercicios.js})
+
+
