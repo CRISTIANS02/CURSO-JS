@@ -66,4 +66,82 @@ Para esto tenemos los `Operadores Aritmeticos` basicos como:
 **Podemos agrupar operaciones con parentesis () las operaciones pues**
 consulta de archivos de operadores [aqui](./Operadores.js). ve los ejercicios [aqui](./ejercicios.js})
 
+#### Cadena
+El sigiente dato primitivo es la `cadena` - `string`.
+¿Para que usan las cadenas en javascript?
+- Para representar texto
+  
+se escribe encerrando su ciontenido entre comillas:
 
+**cadenas con contenido**
+```js
+"soy un texto" // comillas dobles
+´tambien soy un texto´ // comillas simples
+`yo tambien soy`  // acentro grave (alt+96) 
+```
+**cadenas vacia**
+
+""
+
+´´´´
+
+**Problema** - Como representamos un texto entre commillas
+Para hacer el uso  de  las comillas para hacer el uso de commillas dentro del contenido de una cadena podemos segir las sigientes recomendaciones:
+
+* Si nuestro texto tiene que estar entre commillas sinples 
+  
+        "´este texto se muestra entre commillas simples´"
+
+* Si nuestro texto tiene que estar entre commillas dobles
+  
+        `" este texto se muestra entre commillas doble"`
+
+*  si nuestro texto tendra tanto commillas dobles como simples
+  
+        '´ esta en commilas simples´,"esta en comillas dobles"'
+
+Otra manera de hacer lo antes mencionado es haciendo uso de la barrainvertida`\` tambien conocida como `caracter de escape`.
+hacer uso de este caracter indica en el caracter posterior tendra significado especial.
+```js 
+//solucionamos este problema haciendo uso de los asentos graves
+`primera linea
+segunda linea`
+```
+antes de la incorporación de **ecma6** **es6** en el uso de acentos graves se utilizaba en el caracter de escape`\`
+```js
+" este es mi primera linea \n y esta es la sigiente linea"
+```
+**problema** - deseo tabular un texto
+```js
+`
+este texto no esta tabulado
+      este texto si esta tabulado
+`
+```
+ahora tabularemos haciendo uso del escape
+```js
+"sin tabular\t y tabulado"
+```
+
+#### Concatenacion
+El unico operador aritmetico que puede ser usado por cadenas es el operador suma `(+)` puede ser usado entre dos a mas cadenas y pasa a llamar operador de concatenacion, lo que realiza es unir cadena en una sola.
+
+**EJEMPLITO**
+
+```js
+"hola"+" "+"mundo"
+```
+
+
+#### plantillas literales
+
+Las plantillas mencionadas anteriormente con el nombre de  acentos graves son usadas para mostrar texto literal, tambien nos permite ejecutar codigo javascript dentro de una plantilla literal el codigo o el resultado de este codigo sera transformado en un dato de tipo texto y se incluira en la posición en que se encuentre.
+Para hacer  uso de la siguienteexpresión`${}`.
+````js
+//creando una plantilla literal - template literals
+``
+// usamos js dentro de una plantilla litetal
+`la suma de 1+1 es ${1+1}`
+```
+> [!TIP]
+> Se dice literal por que con el  formato que codificamos serea mostrado de esa misma forma en la consola
