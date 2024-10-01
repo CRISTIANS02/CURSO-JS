@@ -137,11 +137,47 @@ El unico operador aritmetico que puede ser usado por cadenas es el operador suma
 
 Las plantillas mencionadas anteriormente con el nombre de  acentos graves son usadas para mostrar texto literal, tambien nos permite ejecutar codigo javascript dentro de una plantilla literal el codigo o el resultado de este codigo sera transformado en un dato de tipo texto y se incluira en la posición en que se encuentre.
 Para hacer  uso de la siguienteexpresión`${}`.
-````js
+```js
 //creando una plantilla literal - template literals
 ``
 // usamos js dentro de una plantilla litetal
 `la suma de 1+1 es ${1+1}`
 ```
-> [!TIP]
-> Se dice literal por que con el  formato que codificamos serea mostrado de esa misma forma en la consola
+ >[!TIP]
+ Se dice literal por que con el  formato que codificamos serea mostrado de esa misma forma en la consola.
+
+#### OPERADORES UNARIOS
+No todos lo operadores son simbolos, algunos se escriben como palabras.
+Un ejemplo es el operador `typeof`, este operador produce un valor de cadena que indica el tipo del valor que le proporcionamos.
+
+`operadores vinarios` se les conoce por que opera sobre dos valores `2*5`
+`operador unario` por que solo trabaja con un valor.
+
+```js
+// para ver la funcionlidad o el valor que gener siempre debemos mostralo en un console
+
+console.log(type 5 )
+```
+
+#### VALORES BOLEANOS 
+Este tipo de dato  primitivo es util cuando tenemos un valor que distinga solo entre dos posibilidades, como `si` y `no` o `entendido` y `apagado`.
+Para este proposito, javascript tiene un tipio de dato `boleano`,  que solo tiene dos valores, `treu`,`false`.
+**Que formas de producir valores tenemos tenemos?**
+1. **Usando valores de conparacion**
+   Los operadores de ocnparacion son los siguientes
+   - Mayor que (>).
+   - Menor que (<).
+   - Mayor o igual que (>=).
+   - Menor o igual que (<=).
+   - Igual a (==).
+   - Extrictamente igual(===).
+   - No es ygual a (!=).
+2. **Usando Operadores Logicos**
+    Javascript soporta tres operadores logicos
+     - and (Y)representacion en javascriot`&&`
+     - or (O) representacion en javascript `||`,
+     - not (no) representacion en javascript `! ` 
+  
+  **Obseervación** Este es un operador unario que su funcion es invertir el valor que tiene a su derecha `!true` produce `false`
+  - and
+1. 
