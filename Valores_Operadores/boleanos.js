@@ -28,11 +28,31 @@ console.log("Ardvark">="Zoroaster")
 console.log(true && false)
 console.log(true && true)
 
+//OBSERVACION: Si ambos valores son verdaderos devolvera el segundo valor.
+console.log("hola" && "nundo")
+
+//OBSERVACIÓN : En caso exista un valor verdadero y uno falso devolvera el valor falso.
+//console-log(0 && "hola")
+
+//OJO: Los valores  0,NaN y un cadena basia ""  son considerados false
+
 // en el caso del operador || produce verdadero si cualquier de valores dados es verdadero.
 
 console.log(false || false)
 console.log(true || false)
 
+// 
+respuesta =" te debuelvo los ositos tiernos "
+console.log(respuesta || "tu busqueda no exixte")
+console.log(0 ||" ")
+
+
 //en el caso del operador not (!) invierte el valor dado
 console.log(!true)
 console.log(!false)
+
+//usando el operador relacional
+//Observacion solo funciona en objetos
+// averigiar por que sale false en este caso 
+console.log("hola" in "hola mundo")
+

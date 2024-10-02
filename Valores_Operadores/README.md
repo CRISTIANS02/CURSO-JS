@@ -180,7 +180,25 @@ Para este proposito, javascript tiene un tipio de dato `boleano`,  que solo tien
      - and (Y)representacion en javascriot`&&`
      - or (O) representacion en javascript `||`,
      - not (no) representacion en javascript `! ` 
+  opera **Obseervación** Este es un operador unario que su funcion es invertir el valor que tiene a su derecha `!true` produce `false`
   
-  opera**Obseervación** Este es un operador unario que su funcion es invertir el valor que tiene a su derecha `!true` produce `false`
-  - and
-1. 
+  >[!TIP]
+  **AND `&& `** - Si tenemos dos valores verdaderos devolvera el segundo valor verdadero, si tenemos un valor falso y un verdadero devolvera falso.
+
+  >[!TIP]
+   **OR `||`** - Si tenemos dos valores  verdaderos devolvera el primer valor verdadero, si tenemos un valor verdadero y uni falso devolvera el valor verdadero
+
+  
+3.  **Usando eloperador relacional**
+
+   Este operador compara su valores y yretorna un boleano como resultado, lo que evalua este operador es si un apropiedad especifica se encuentra en un objeto.
+   Evalua si el primer valor que se encuentra a su izquierda existe o forma parte del segundo valor que se encuentra en su derecha
+   ```js
+   "a" in ["a","e","i","o","u"]
+   ```
+
+####   Operador Ternario
+Este operador trabaja con tres valores .
+El primer valor es el que determina si se muestra el restom de valores.
+Eso quiere decir que si el primer valor es primero
+
