@@ -13,6 +13,18 @@ console.log("divición",10/2)
 console.log("modulo",10%2)
 //POTENCIA
 console.log("potencia",4**2)
+//Incremento
+num=0
+console.log(num++)
+console.log(++num)
+//decremento
+//DECREMENTO
+num=10
+console.log(--num)
+
+
+
+
 /* Realizar la operacion de sumar 4 y 100 y luego multiplicar11 */ 
 
 //  estamos haciendo uso de la agrupacion de operaciones.

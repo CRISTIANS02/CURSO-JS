@@ -53,6 +53,7 @@ NaN  → not a number
 // Cuando el resultado de una operacion es matematicamente imposible
 ```
 ### Aritmetica (Operadores Aritmeticos)
+
 #### Aritmetica
 La principal operacion que se puede hacer con numeros es la aitmerica.
 Para esto tenemos los `Operadores Aritmeticos` basicos como:
@@ -62,6 +63,8 @@ Para esto tenemos los `Operadores Aritmeticos` basicos como:
 - Multiplicacion (*)
 - Divicion (/)
 - Modulo (%)
+- Decremento (--)
+- Incremento (++)
   
 **Podemos agrupar operaciones con parentesis () las operaciones pues**
 consulta de archivos de operadores [aqui](./Operadores.js). ve los ejercicios [aqui](./ejercicios.js})
@@ -178,6 +181,6 @@ Para este proposito, javascript tiene un tipio de dato `boleano`,  que solo tien
      - or (O) representacion en javascript `||`,
      - not (no) representacion en javascript `! ` 
   
-  **Obseervación** Este es un operador unario que su funcion es invertir el valor que tiene a su derecha `!true` produce `false`
+  opera**Obseervación** Este es un operador unario que su funcion es invertir el valor que tiene a su derecha `!true` produce `false`
   - and
 1. 
