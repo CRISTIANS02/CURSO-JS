@@ -4,6 +4,10 @@
   - [Indice](#indice)
   - [Interaccion basica con el usuario](#interaccion-basica-con-el-usuario)
   - [Expresiones y Declaraciones](#expresiones-y-declaraciones)
+  - [Bindings (Enlaces)](#bindings-enlaces)
+  - [El Entorno](#el-entorno)
+  - [Control de flujo](#control-de-flujo)
+    - [Ejecución Condicional](#ejecución-condicional)
 ## Interaccion basica con el usuario
 Podemos interactuar con el usuario desde Javascript utilizando un metodo sencillo que viene implementado en los navegadores.
 El metodo es conocido como `window` o el metodo de ventana, este metodo en realidad es un objeto que contiene o almacena varias funciones, entre ellas las de mostrar mensajes o pedir datos al usuario.
@@ -37,3 +41,54 @@ respuesta=window.prompt("como te llamas?")
 !true;
 let estado=!false;
 ```
+
+## Bindings (Enlaces)
+Cuando creamos un valor estos valores son volatiles solo existen en la ejecución del programa y solo son llamados.
+El bindings o enlace es la manera que javascript recuerda los valores y mantine un estado interno asi como la reutilizacion de valores.
+
+**como usamos los bindings en javascript**.
+
+Para Usar el bingdings primero debemos usar la palabra reservada o `keywor` de nombre `let`, despues debemos darle el nombre para identificar
+```js
+// este es un enlace que puede apuntar a varios valores
+//como un pulpito com muchos brasitos
+let edadPersona= 34
+// si deseariamos que nuestro enlace solo apunte a un valor oaseq un pulpito con un brasito entonces para crear este enlace debemos hacer uso de la keywor const.
+const edad=45
+//este enlace simepre apunta al valor 45 no podra modificar su enlace a otro valor
+```
+>[!NOTE]
+**Que nombre ponerle a nuestro enlace**- El nombre de un enlace debera escribir el valoral que esta enlasado y debera estar escrita en `camelCase`
+
+```js
+//Quiero crear un anlace que tenga el valor de la fecha actrual
+//incorrecto
+let yyyymmdd="202410910"
+//correcto
+let fechaActual="09-10-2024"
+//correcto
+let edadActual
+```
+
+## El Entorno
+El entorno es conocido como el momento en que  el se ejecuta o inicio un archivi javascript.
+El entorno al crearse no se crea basio dentro del entorno se creara la coleccion de enlaces y valores.
+
+**TAREA**-  Averiguar mas sobre ejecucion en linea de los entornos en javascript
+
+## Control de flujo
+
+Una sentencia se ejecuta como si fuera una historia d arriba abajo.
+por ejemplo:
+
+```js
+let elNumero = prompt ("Elige un numero")
+console.log(`tu numero es la raiz cuadrada de: ${elNumero+elNumero}`)
+
+// primero le pide al usuario un numero y despues muestra un mensaje y el cuadrado de ese numero
+
+```
+
+
+### Ejecución Condicional
+Hacemos uso de este control de flujo cuando tenemos distintas caminos o distintos mensajes que deseamos mostrar segun una condición.
