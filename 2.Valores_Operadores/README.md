@@ -189,6 +189,5 @@ Para este proposito, JavaScript tiene un tipo de dato `Booleano`, que tiene solo
 #### Operador Ternario
 Este operador trabaja con tres valores, el primer valor es el que determinara si se muestran el resto de valores, eso quiere decir que si el primer valor es verdadero mostrara el segundo valor, mientras que si es falso mostrara el tercer valor.
 
-```js
+
 ![alt text](image.png)
-```
