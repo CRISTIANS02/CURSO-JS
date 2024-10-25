@@ -8,7 +8,10 @@
     - [Funciones como valor](#funciones-como-valor)
     - [Función como declaración](#función-como-declaración)
     - [Función como Flecha (arrow function)](#función-como-flecha-arrow-function)
-    - [Diferencias](#diferencias)
+  - [Diferencias](#diferencias)
+    - [Binding](#binding)
+  - [La pila de llamadas ( Call Atack)](#la-pila-de-llamadas--call-atack)
+    - [Características del LIFO:](#características-del-lifo)
 
 
   
@@ -141,4 +144,81 @@ let registroUsuario=(nombre,apellido)=>{
 }
 conosle.log (registroUsuario ("edwin","cachondo"))
 ```
-### Diferencias
+## Diferencias
+Las diferfencias que tenemos al momento de crear una funcion declarativa, funcion como valor y flecha es el binding.
+
+### Binding
+Es una tecnica que guarda las funciones y variables(enlaces)  sube al princio la declaracion  no el valor al principio de javascript.
+
+```js
+function saludo(){
+    return "hola primo"
+}
+
+function despedida(){
+    return "adios primo"
+
+}
+```
+
+```js
+saludo()
+despedida()
+```
+## La pila de llamadas ( Call Atack)
+Es una tecnica que se usa para controlar de manera correecta la ejecución de una función
+
+**TAREITA**
+
+**AVERIGUAR SOBRE LIFO**
+LIFO, que significa "Last In, First Out" (último en entrar, primero en salir), es un método de valoración de inventarios y contabilidad que asume que los últimos artículos en ser añadidos a un inventario son los primeros en ser vendidos o utilizados. Este método es comúnmente utilizado en la contabilidad de costos y tiene implicaciones fiscales y financieras.
+
+### Características del LIFO:
+
+1. **Fluctuaciones de Precios**: En un entorno de precios crecientes, el LIFO puede resultar en un costo de bienes vendidos más alto, lo que puede reducir las ganancias imponibles.
+  
+2. **Valoración de Inventarios**: Los inventarios que permanecen en el balance general se valoran a precios más antiguos, lo que puede dar lugar a una subestimación de los activos.
+
+3. **Impacto en el Flujo de Efectivo**: Puede mejorar el flujo de efectivo a corto plazo debido a la reducción de impuestos.
+
+4. **Normas Contables**: En los Estados Unidos, el LIFO es aceptado bajo los principios de contabilidad generalmente aceptados (GAAP), pero no es permitido bajo las Normas Internacionales de Información Financiera (NIIF).
+
+**Ejemplo:**
+
+Supongamos que una empresa tiene el siguiente inventario:
+
+- 100 unidades a $10 cada una (compradas primero)
+- 100 unidades a $12 cada una (compradas después)
+
+Si la empresa vende 100 unidades, bajo el método LIFO, el costo de bienes vendidos se calcularía utilizando las unidades más recientes, es decir, las de $12, mientras que las de $10 permanecerían en el inventario.
+
+ ```js
+// hacer un programa que haga  una ensalda
+function cortarTomate(){
+    console.log("Cortando tomates")
+}
+function cortarLechuga(){
+    console.log("cortando lechuga")
+}
+function CortarPepino(){
+    console.log("cortando pepino para el primo")
+}
+function Cortarlimon() {
+    console.log("cortando limon")
+}
+
+function preparandoEnsalada(){
+    cortarTomate()
+    cortarLechuga()
+    CortarPepino()
+    Cortarlimon()
+    console.log("mesclando las verduras")
+    
+}
+function comer() {
+    preparandoEnsalada()
+    console.log("Tragando la Ensalada")
+    
+}
+comer()
+ ```
