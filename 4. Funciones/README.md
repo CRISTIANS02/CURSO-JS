@@ -12,6 +12,7 @@
     - [Binding](#binding)
   - [La pila de llamadas ( Call Atack)](#la-pila-de-llamadas--call-atack)
     - [Características del LIFO:](#características-del-lifo)
+  - [Closure o Funciones de Cierre (Funciones que retorna funciones)](#closure-o-funciones-de-cierre-funciones-que-retorna-funciones)
 
 
   
@@ -222,3 +223,32 @@ function comer() {
 }
 comer()
  ```
+
+## Closure o Funciones de Cierre (Funciones que retorna funciones)
+Un `clousure` es un a serie de funciones que capsula una serie de varisbles y definiciones locales que unicamente seran accesibles si son devueltas con el keyword `return`.
+Antes de que aparsca laversion `acma 6` los `closure` eran un patron creacional que nos permitia modularizar nurdtro codigo, en lugar de usar las `clases`, que eran populares en otros lrnguajes pero  que javasCript aun no lo implementaba.
+
+<!-- //typescrip es para aprender a deseñar pajinas web -->
+```js
+//Una funcion que retorna otra funcion ( por l gernerl es una funcion anonima)
+//funcion clasica
+function retornaValor(n){
+    return n+1
+
+}
+// llamando alafuncion clasica
+return Valor 10
+
+// funcion closure
+function retornaValor (n){
+    return function(){
+        return n+1
+    }
+}
+//llamando a la funcion closure
+retornaValor(10)()
+
+```
+>[!NOTE]
+Las Funciones `closure` sin usadas por que pueden mantener el valor de sus enlaces o bariables locales en todo el proceso  de la ejecucion  de su funcion padre por cada llmada que se realiza
+
