@@ -15,6 +15,11 @@
   - [Closure o Funciones de Cierre (Funciones que retorna funciones)](#closure-o-funciones-de-cierre-funciones-que-retorna-funciones)
     - [Clousure de Tipo clase](#clousure-de-tipo-clase)
   - [Prototype ( Tarea: Averiguar y sus ejemplos)](#prototype--tarea-averiguar-y-sus-ejemplos)
+    - [Creación básica de un prototype](#creación-básica-de-un-prototype)
+    - [Herencia usando prototype](#herencia-usando-prototype)
+    - [Extendiendo objetos nativos](#extendiendo-objetos-nativos)
+    - [Prototype chain (Cadena de prototipos)](#prototype-chain-cadena-de-prototipos)
+    - [Verificación de propiedades](#verificación-de-propiedades)
 
 
   
@@ -280,4 +285,211 @@ La funcion de tipo clase no hace uso de `return` en sus funcion es al hacer uso 
 
 >[!WARNING] 
 El problema principal de este tipo de funcion, es que cuando creamos un nuevo objeto a partir de la funcion  en memoria para toda la clase y sus valores creados eso kiere decir variable y funciones, cada vez aue llamamos a  una funcion esta se aplica en memoria
+
 ## Prototype ( Tarea: Averiguar y sus ejemplos)
+Un prototype en `JavaScript `es un mecanismo que permite que los objetos hereden propiedades y métodos de otros objetos. Cada objeto en `JavaScript` tiene una propiedad `prototype` que es una referencia a otro objeto.
+
+### Creación básica de un prototype
+Es un mecanismo para crear una plantilla de objeto que sirve como base para otros objetos.
+```js
+function Persona(nombre) {
+    this.nombre = nombre;
+}
+
+// Añadiendo un método al prototype
+Persona.prototype.saludar = function() {
+    return "Hola, soy " + this.nombre;
+}
+
+const persona1 = new Persona("Ana");
+console.log(persona1.saludar()); // "Hola, soy Ana"
+```
+
+### Herencia usando prototype
+Permite que un objeto herede propiedades y métodos de otro objeto, creando una relación padre-hijo.
+
+```js
+function Animal(nombre) {
+    this.nombre = nombre;
+}
+
+Animal.prototype.hacerSonido = function() {
+    return "Haciendo sonido";
+}
+
+function Perro(nombre, raza) {
+    Animal.call(this, nombre);
+    this.raza = raza;
+}
+
+// Heredar de Animal
+Perro.prototype = Object.create(Animal.prototype);
+Perro.prototype.constructor = Perro;
+
+// Añadir método específico para Perro
+Perro.prototype.ladrar = function() {
+    return "¡Guau!";
+}
+
+const miPerro = new Perro("Bobby", "Labrador");
+console.log(miPerro.hacerSonido()); // "Haciendo sonido"
+console.log(miPerro.ladrar()); // "¡Guau!"
+```
+### Extendiendo objetos nativos
+Permite añadir nuevos métodos a tipos de datos existentes en JavaScript..
+
+```js
+// Añadir un método a todos los arrays
+Array.prototype.primerYUltimo = function() {
+    return [this[0], this[this.length - 1]];
+}
+
+const numeros = [1, 2, 3, 4, 5];
+console.log(numeros.primerYUltimo()); // [1, 5]
+```
+### Prototype chain (Cadena de prototipos)
+Es la manera en que JavaScript busca propiedades y métodos a través de una cadena de objetos vinculados.
+
+```js
+const persona = {
+    saludar: function() {
+        return "Hola";
+    }
+};
+
+const estudiante = Object.create(persona);
+estudiante.estudiar = function() {
+    return "Estudiando";
+}
+
+console.log(estudiante.saludar()); // "Hola"
+console.log(estudiante.estudiar()); // "Estudiando"
+```
+### Verificación de propiedades
+
+Permite comprobar la existencia y origen de propiedades en un objeto.
+```js
+function Coche(marca) {
+    this.marca = marca;
+}
+
+Coche.prototype.tipo = "vehículo";
+
+const miCoche = new Coche("Toyota");
+
+console.log(miCoche.hasOwnProperty("marca")); // true
+console.log(miCoche.hasOwnProperty("tipo")); // false
+```
+**Puntos importantes a recordar:**
+
+Los prototypes son útiles para:
+
+Compartir métodos entre instancias
+Implementar herencia
+Ahorrar memoria al compartir métodos
+
+
+Buenas prácticas:
+
+No modificar prototypes de objetos nativos en producción
+Usar clases modernas (ES6+) cuando sea posible
+Mantener la cadena de prototipos simple
+
+
+Alternativas modernas:
+```js
+// Usando class (ES6+)
+class Persona {
+    constructor(nombre) {
+        this.nombre = nombre;
+    }
+
+    saludar() {
+        return `Hola, soy ${this.nombre}`;
+    }
+}
+```
+
+
+**Ejercicio:**
+```js
+// 1. Crear clase base (Persona)
+function Persona(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+}
+
+// Añadir métodos al prototype de Persona
+Persona.prototype.saludar = function() {
+    return `Hola, soy ${this.nombre} y tengo ${this.edad} años`;
+}
+
+Persona.prototype.cumplirAnios = function() {
+    this.edad++;
+    return `¡Feliz cumpleaños! Ahora tengo ${this.edad} años`;
+}
+
+// 2. Crear clase Estudiante que hereda de Persona
+function Estudiante(nombre, edad, carrera) {
+    // Llamar al constructor de Persona
+    Persona.call(this, nombre, edad);
+    this.carrera = carrera;
+    this.notas = [];
+}
+
+// Establecer la herencia
+Estudiante.prototype = Object.create(Persona.prototype);
+Estudiante.prototype.constructor = Estudiante;
+
+// Añadir métodos específicos de Estudiante
+Estudiante.prototype.estudiar = function() {
+    return `${this.nombre} está estudiando ${this.carrera}`;
+}
+
+Estudiante.prototype.agregarNota = function(nota) {
+    this.notas.push(nota);
+    return `Nota ${nota} agregada`;
+}
+
+Estudiante.prototype.promedio = function() {
+    if (this.notas.length === 0) return 0;
+    const suma = this.notas.reduce((a, b) => a + b, 0);
+    return suma / this.notas.length;
+}
+
+// 3. Uso del código
+// Crear instancias
+const persona1 = new Persona("Ana", 25);
+const estudiante1 = new Estudiante("Juan", 20, "Informática");
+
+// Probar funcionalidad
+console.log("--- Pruebas con Persona ---");
+console.log(persona1.saludar());
+console.log(persona1.cumplirAnios());
+
+console.log("\n--- Pruebas con Estudiante ---");
+console.log(estudiante1.saludar()); // Método heredado
+console.log(estudiante1.estudiar()); // Método propio
+console.log(estudiante1.agregarNota(85));
+console.log(estudiante1.agregarNota(90));
+console.log(estudiante1.agregarNota(95));
+console.log(`Promedio de notas: ${estudiante1.promedio()}`);
+
+// 4. Verificaciones
+console.log("\n--- Verificaciones ---");
+console.log("¿estudiante1 es instancia de Estudiante?", estudiante1 instanceof Estudiante);
+console.log("¿estudiante1 es instancia de Persona?", estudiante1 instanceof Persona);
+console.log("¿estudiante1 tiene propiedad 'nombre'?", estudiante1.hasOwnProperty("nombre"));
+console.log("¿estudiante1 tiene propiedad 'saludar'?", estudiante1.hasOwnProperty("saludar"));
+
+// 5. Extender objeto nativo (Array)
+Array.prototype.promedio = function() {
+    if (this.length === 0) return 0;
+    return this.reduce((a, b) => a + b, 0) / this.length;
+}
+
+// Probar extensión
+const notas = [85, 90, 95];
+console.log("\n--- Prueba de extensión de Array ---");
+console.log(`Promedio de notas usando extensión: ${notas.promedio()}`);
+```
