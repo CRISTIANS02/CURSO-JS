@@ -13,6 +13,8 @@
   - [La pila de llamadas ( Call Atack)](#la-pila-de-llamadas--call-atack)
     - [Características del LIFO:](#características-del-lifo)
   - [Closure o Funciones de Cierre (Funciones que retorna funciones)](#closure-o-funciones-de-cierre-funciones-que-retorna-funciones)
+    - [Clousure de Tipo clase](#clousure-de-tipo-clase)
+  - [Prototype ( Tarea: Averiguar y sus ejemplos)](#prototype--tarea-averiguar-y-sus-ejemplos)
 
 
   
@@ -252,3 +254,30 @@ retornaValor(10)()
 >[!NOTE]
 Las Funciones `closure` sin usadas por que pueden mantener el valor de sus enlaces o bariables locales en todo el proceso  de la ejecucion  de su funcion padre por cada llmada que se realiza
 
+### Clousure de Tipo clase
+Son funciones cuyo uso son ygaules alas clases dentro de la ejecucion de una clase temos que se llama como `Instancia`en javascript tenemos funciones `clousure`cque pueden instanciar al ygual que una clase, la diferencia con la funciones `clousure` clasicas es que en esta hacemos uso de de la palabra `keywor` llamada `this`
+```js
+function contador(){
+    this.contador=0
+    this.incre=function(){
+        this.contador++
+    }   
+    this.decre=function(){
+        this.contador--
+    }
+}
+// realizamos una instacia
+let count1=new contador()
+count1,contador
+for(let i=0;i<5;i++){
+    count1.incre()
+}
+
+```
+
+>[!NOTE]
+La funcion de tipo clase no hace uso de `return` en sus funcion es al hacer uso de `this` caso funcion o variable estara enlazada al objeto que se cree.
+
+>[!WARNING] 
+El problema principal de este tipo de funcion, es que cuando creamos un nuevo objeto a partir de la funcion  en memoria para toda la clase y sus valores creados eso kiere decir variable y funciones, cada vez aue llamamos a  una funcion esta se aplica en memoria
+## Prototype ( Tarea: Averiguar y sus ejemplos)

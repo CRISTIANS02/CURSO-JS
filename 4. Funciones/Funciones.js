@@ -35,39 +35,16 @@
 //return contador
 
 function contador(){
-    //variable local
-    let contador = 0 
-    function incremento(){
-        return contador++
+    this.contador=0
+    this.incre=function(){
+        this.contador++  
     }
-    function decremento(){
-        return contador--
-    }
-    function valorContador(){
-        console.log(contador)
-    }
-    return{
-        valorContador,
-        incremento,
-        decremento
+    this.decre=function(){
+        this.contador--  
     }
 }
-let count1=contador()
-for(let i=0;i<5;i++){
-    count1.incremento()
-}
-count1.valorContador()
-
-let count2=contador()
-for(let i=0;i<5;i++){
-    count2.decremento()
-}
-count2.valorContador()
-
-
-// let count1=contador()
-// count1.valorContador()
-// count1.incremento()
-// count1.valorContador()
-// count1.decremento()
-// count1.valorContador()
+// realizando la instancia con new
+let count1=new contador()
+console.log(count1.contador)
+count1.incre()
+console.log(count1.contador)
