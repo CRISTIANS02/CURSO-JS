@@ -83,6 +83,28 @@ Buscar Elementos
 - join(): Une todos los elementos de un array en una cadena, utilizando un separador opcional.
 - slice(): Extrae una sección de un array y devuelve un nuevo array.
 
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+// Agregar un elemento al final
+numbers.push(6);
+
+// Eliminar el primer elemento
+numbers.shift();
+
+// Buscar el índice del número 3
+const index = numbers.indexOf(3);
+
+// Crear un nuevo array con los números multiplicados por 2
+const doubledNumbers = numbers.map(number => number * 2);
+
+// Filtrar los números mayores a 3
+const filteredNumbers = numbers.filter(number => number > 3);
+
+console.log(numbers); // [2, 3, 4, 5, 6]
+console.log(doubledNumbers); // [4, 6, 8, 10, 12]
+console.log(filteredNumbers); // [4, 5, 6]
+```
 
 
 ## Objetos
