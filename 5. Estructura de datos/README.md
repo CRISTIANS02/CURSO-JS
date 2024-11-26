@@ -56,6 +56,35 @@ let vocales=["a"]
 vocales.pop()
 ```
 ## tarea  AVERIGUAR LOS METODOS MAS USADOS  EXIXTEN PARA EL RATAMIENTO DE LISTAS  EN JAVASCRIPT
+### Agregar Elementos
+- push():Agrega uno o más elementos al final de un array.
+
+- unshift():Agrega uno o más elementos al principio de un array.
+
+### Eliminar Elementos
+- pop(): Elimina y devuelve el último elemento de un array.
+
+- shift(): Elimina y devuelve el primer elemento de un array.
+- splice(): Elimina elementos a partir de un índice específico y puede insertar nuevos elementos en su lugar.
+Buscar Elementos
+- indexOf(): Devuelve el índice del primer elemento que coincida con el valor buscado, o -1 si no se encuentra.
+- lastIndexOf(): Devuelve el índice del último elemento que coincida con el valor buscado, o -1 si no se encuentra.
+- find(): Devuelve el primer elemento que cumpla con una condición especificada por una función.
+- findIndex(): Devuelve el índice del primer elemento que cumpla con una condición especificada por una función.
+### Iterar sobre Elementos
+- forEach(): Ejecuta una función proporcionada una vez por cada elemento del array.
+- map(): Crea un nuevo array con los resultados de la llamada a una función proporcionada para cada elemento del array original.   
+- filter(): Crea un nuevo array con todos los elementos que cumplan con la condición especificada por una función.
+- reduce(): Aplica una función a un acumulador y a cada elemento del array (de izquierda a derecha) para reducirlo a un único valor.   
+### Otros Métodos Útiles
+- includes(): Determina si un array incluye un cierto elemento, devolviendo true o false.
+- some(): Determina si al menos un elemento del array cumple con la condición especificada por una función.
+- every(): Determina si todos los elementos del array cumplen con la condición especificada por una función.
+- join(): Une todos los elementos de un array en una cadena, utilizando un separador opcional.
+- slice(): Extrae una sección de un array y devuelve un nuevo array.
+
+
+
 ## Objetos
 ### Creacion
 ### Acceder a un elemento de objeto

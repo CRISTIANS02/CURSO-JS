@@ -16,7 +16,9 @@
 
 
 // Llamamos a la función para buscar la naranja
-encontrarNaranja(frutas);
+
+
 // crear dos funciones  que reciban  por parametros una lista  de numeros una funcion encontrara devolvera el numero menor de la lista y la otra funcion encontrara y devolvera el numero mayor de la lista. ojo usar los metodos de min y max.
+
 
 // crear una funcion que me permita contar la cantidad de vocales "a" que  tengo una lista.
