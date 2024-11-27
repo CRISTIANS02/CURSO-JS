@@ -108,9 +108,42 @@ console.log(numbers); // [2, 3, 4, 5, 6]
 console.log(doubledNumbers); // [4, 6, 8, 10, 12]
 console.log(filteredNumbers); // [4, 5, 6]
 ```
-
+```js
+let texto="hola mundo"
+//["Hola","mundo"]
+let listaTexto=Texto.split(" ")
+console.log(listaTexto)
+let lista=["hola","como","estas"]
+//"hola como estas"
+let nuevoTexto=lista.join(",")
+console.log(nuevoTexto)
+```
 
 ## Objetos
+Los objetos osn tipos de datos estructurados similares a las lista, para poder acceder a un elemento de la lista jasvascript les asigna indices, en este caso, los objetos como unica diferencia de las listas nosotros podemos asignar el nombre dl elemento al cual deseamos acceder a esto se lo conoce como `clave valor`
+cada clave valor es un elemento de un objeto si deseamos crear mas elementos tendremos que separarlos por comas
 ### Creacion
+Para crear un objeto debemos encerar los elementos en llaves `{}` cada elemento estara conformado por su `clave:vlor`,
+```js.
+let datosJory=["jory","rodrigez",20,"M"]
+let datosJoryObjeto={
+    nombre:"Jory",
+    apellido:"rodrigez",
+    edad:20,
+    sexo:"todos los dias",
+    ganado:["el primo","los chamos"," las enfermeras","mineros"],
+    direccion:{
+        tipoCalle:"pasaje",
+        nombreCalle:"querobamba",
+        numeroVivienda:222,
+        numeroCuarto:5
+    },
+    accion:(=>{console.log("hola soy jory")})
+}
+console.log(datosJoryObjeto.ganado)
+console.log(datosJoryObjeto["sexo"])
+console.log(direccion["numeroCuarto"])
+console.log(datosJoryObjeto.ganado[3])
+```
 ### Acceder a un elemento de objeto
 ### Metodos
