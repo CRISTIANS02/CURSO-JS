@@ -82,6 +82,9 @@ Buscar Elementos
 - every(): Determina si todos los elementos del array cumplen con la condición especificada por una función.
 - join(): Une todos los elementos de un array en una cadena, utilizando un separador opcional.
 - slice(): Extrae una sección de un array y devuelve un nuevo array.
+- split(): combertir de texto a una lista.
+- join(): Permite combinar elementos de un array a una cadena e texto.
+- 
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
