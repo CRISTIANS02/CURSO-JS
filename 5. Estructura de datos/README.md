@@ -145,5 +145,50 @@ console.log(datosJoryObjeto["sexo"])
 console.log(direccion["numeroCuarto"])
 console.log(datosJoryObjeto.ganado[3])
 ```
+### *TAREA*
+
+*Averiguar como eliminar un elemento de un objeto:*
+- Usando el operador `DELETE`:
+```js
+let persona = {
+    nombre: "Juan",
+    edad: 30,
+    ciudad: "Madrid"
+};
+
+delete persona.ciudad; // Elimina la propiedad 'ciudad'
+console.log(persona); // { nombre: "Juan", edad: 30 }
+```
+- Usando `destructuring ` (desestructuración):
+```js
+let persona = {
+    nombre: "Juan", 
+    edad: 30, 
+    ciudad: "Madrid"
+};
+
+let { ciudad, ...sinCiudad } = persona;
+console.log(sinCiudad); // { nombre: "Juan", edad: 30 }
+```
+
+- Si necesitas eliminar múltiples propiedades:
+```js
+let persona = {
+    nombre: "Juan",
+    edad: 30,
+    ciudad: "Madrid",
+    trabajo: "Ingeniero"
+};
+
+// Eliminar varias propiedades a la vez
+delete persona.ciudad;
+delete persona.trabajo;
+```
+*Algunos consejos importantes:*
+
+- El operador `delete` es el método más directo
+- `delete` devuelve``true `si la eliminación fue exitosa
+- No funciona con propiedades que sean no configurables
+- Es más lento que otras operaciones de objeto
 ### Acceder a un elemento de objeto
 ### Metodos

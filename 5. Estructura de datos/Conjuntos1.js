@@ -145,5 +145,8 @@ function Computadora(marca, modelo, procesador, ram, disco, tarjetaVideo) {
   miComputadora["targeta"]="nvidia me tienes envidia"
   console.log(miComputadora)
   
+
   //averiguar como eliminar un elemento de un objeto
+
+  
  //hacer ejercicios de git del 7 al 10 en git repositorio de git del tecnologico
