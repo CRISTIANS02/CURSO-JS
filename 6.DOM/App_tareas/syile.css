@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+
+} 
+main{
+    background: rgb(12, 216, 148);
+    width: 60%;
+    padding: 3em;
+}
+.titulo{
+    text-align: center;
+}
+.contenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contenido>input{
+    height: 2em;
+    border-radius: 5px;
+}
+.contenido>button{
+    background: #ec840d;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.contenido>button>span{
+    font-size: 18px;
+}
